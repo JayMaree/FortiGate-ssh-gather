@@ -132,8 +132,11 @@ def put(host, local_path, remote_path):
             print host, error
 
 def main():
+    print 'Connecting with the defined FortiGate devices'
     connect_all(FORTIGATES)
+    print 'Sending the command...'
     run_all("get sys status")
+    print 'Executed.'
     close_all()
 
 if __name__ == '__main__':
